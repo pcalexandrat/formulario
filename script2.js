@@ -1,7 +1,5 @@
-import { PALAVRAS_RUINS } from "./palavrasRuins2.js";
-
+import { PALAVRAS_RUINS } from "./palavrasRuins.js";
 const botaoMostraPalavras = document.querySelector("#botao-palavrachave");
-
 botaoMostraPalavras.addEventListener("click", mostraPalavrasChave);
 
 function mostraPalavrasChave() {
@@ -11,7 +9,6 @@ function mostraPalavrasChave() {
 
     campoResultado.textContent = palavrasChave.join(", ");
 }
-
 function processaTexto(texto) {
     let palavras = texto.split(/\P{L}+/u);
 
@@ -23,7 +20,6 @@ function processaTexto(texto) {
 
     const frequencias = contaFrequencias(palavras);
 
-    // Ordena a palavra por frequência
     function ordenaPalavra(p1, p2) {
         return frequencias[p2] - frequencias[p1];
     }
