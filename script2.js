@@ -20,7 +20,7 @@ function processaTexto(texto) {
 
     const frequencias = contaFrequencias(palavras);
 
-    function ordenaPalavra(p1, p2) {
+ function ordenaPalavra(p1, p2) {
         return frequencias[p2] - frequencias[p1];
     }
 
